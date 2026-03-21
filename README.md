@@ -34,3 +34,8 @@ log/QXDM_OVER_PCIE.txt
 log/AT_OVER_PCIE.txt
 log/MBIM_OVER_PCIE.txt
 log/QMI_OVER_PCIE.txt
+
+
+### Giving support of RM520N-GL in Axon
+
+[Gist](!https://gist.github.com/avi951/ff8c054c440317deb32e7e746ab2f9c8)
