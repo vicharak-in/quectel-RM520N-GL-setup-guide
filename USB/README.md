@@ -109,6 +109,7 @@ The `<value>` parameter is an integer type that defines how the 5G module presen
 
 #### 4. RNDIS (`usbnet,3`)
 
+* **Best For:** Modern Linux distributions 
 * **Use Case:** Used primarily when the host system only supports Microsoft's specific Ethernet-over-USB implementation. It is generally being phased out in favor of MBIM or ECM.
 
 ---
