@@ -77,7 +77,7 @@ AT+QCFG="data_interface",0,0
 AT+QCFG="usbnet",<value>
 ```
 
-The `<value>` parameter is an integer type that defines how the 5G module presents its network interface to the host operating system.
+The `<value>` parameter is an integer type that defines how the 5G module presents its network interface to the host operating system. NIC data call method in USB NIC mode.
 
 ### Configuration Values
 
