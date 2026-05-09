@@ -1,3 +1,6 @@
+> Note  
+> Clone this repository onto the Axon board and follow the compilation steps to build the driver.
+
 ## Driver Structure
 
 ```
