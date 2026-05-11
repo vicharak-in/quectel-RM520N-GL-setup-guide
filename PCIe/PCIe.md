@@ -27,6 +27,41 @@
 | NC | 29 | | 30 | NC |
 
 
+## Set module into PCIe Mode
+
+1. Connect HAT from Type C Port to Axon USB 2.0 using USB Type C to USB cable.
+2. Module is detected on `lsusb` command.
+3. Run `mmcli -L`
+4. Run `mmcli -m <number>`
+5. You can find which port support AT Command on **tty/USB<number>**, whereas number is port number.
+6. Run below command.
+   ```bash
+   sudo minicom -D /dev/ttyUSB<number>
+   ```
+    ## Notes
+
+    * Ensure you are connected to the correct AT port (e.g., `/dev/ttyUSB0`, `/dev/ttyUSB2`).
+    * Use tools like `minicom`, `picocom`, or `screen` to send AT commands.
+    * Some commands may require proper permissions or modem initialization.
+
+
+7. Text does not appears on screen but, it applies, You can check it by below command to run.
+    ```bash
+    AT
+    ```
+8. Response should be `+ OK`, it means AT command response successfully.
+9. Run below commands to set module into PCIe mode.
+
+    ```bash
+    AT+QCFG="pcie/mode",0 // set module as an end point
+    ```
+
+    ```bash
+    AT+QCFG="data_interface",1,0 
+    ```
+    
+10. Now, Poweroff the axon and power it on again.
+   
 ## Setup and Compile Driver
 
 1. Clone this repository onto the Axon board and follow the compilation steps to build the driver.
