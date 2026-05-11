@@ -51,16 +51,17 @@
     ```
 8. Response should be `+ OK`, it means AT command response successfully.
 9. Run below commands to set module into PCIe mode.
+    Set module as an end point
 
     ```bash
-    AT+QCFG="pcie/mode",0 // set module as an end point
+    AT+QCFG="pcie/mode",0 
     ```
 
     ```bash
     AT+QCFG="data_interface",1,0 
     ```
     
-10. Now, Poweroff the axon and power it on again.
+11. Now, Poweroff the axon and power it on again.
    
 ## Setup and Compile Driver
 
