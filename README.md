@@ -5,6 +5,11 @@ This module supports two different communication interfaces: **PCIe** and **USB*
 Each interface requires different driver support and configuration procedures for proper operation. 
 Detailed documentation for both methods is provided separately in their respective folders, including driver installation, setup instructions, configuration steps, and usage guidelines.
 
+
+### Setup Guide
+
+"To use this **module with the Vicharak HAT**, ensure the module is securely attached on B-Key Connector while the Axon is powered off. Only then should you turn the Axon on."
+
 ### Note
 
 The R520N-GL is designed for data only. And it do not support the voice call.
