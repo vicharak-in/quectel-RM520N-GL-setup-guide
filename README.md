@@ -13,3 +13,5 @@ If you must try it, you can try
 AT+QCALLCFG=“voice_disable”,2
 But it is not recommended. If you need the voice call feature, it is better to contact with the sales for another Quectel modem.
 Refernce : https://forums.quectel.com/t/voice-call-with-the-rm520n-gl/34404/15?u=avi951
+
+<img width="769" height="567" alt="image" src="https://github.com/user-attachments/assets/f1822752-5b8a-405c-a76f-047555710111" />
