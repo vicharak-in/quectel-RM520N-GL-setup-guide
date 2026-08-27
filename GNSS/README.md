@@ -41,3 +41,6 @@ Use the **AT port** to send the following commands to control the GNSS engine.
 | `AT+QGPS=1` | **Open GPS positioning** | Initializes the GNSS engine. |
 | `AT+QGPSLOC=0` | **Get GPS position** | Retrieves the current latitude, longitude, and time. |
 | `AT+QGPS=0` | **Close GPS position** | Disables the GNSS engine to save power. |
+
+
+<img width="897" height="864" alt="image" src="https://github.com/user-attachments/assets/d399403d-a3e0-4e3e-940d-3e58b616310b" />
