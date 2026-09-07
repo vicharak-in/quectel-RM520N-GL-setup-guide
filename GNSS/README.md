@@ -44,3 +44,7 @@ Use the **AT port** to send the following commands to control the GNSS engine.
 
 
 <img width="897" height="864" alt="image" src="https://github.com/user-attachments/assets/d399403d-a3e0-4e3e-940d-3e58b616310b" />
+
+### Module is connected to PCIe
+<img width="1107" height="288" alt="image" src="https://github.com/user-attachments/assets/803cd069-c7d3-4d10-abe5-6f0a5f00d9e4" />
+
