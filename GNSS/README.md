@@ -63,7 +63,7 @@ Verify that the PCIe hardware endpoint is detected by the kernel:
 
 ```bash
 # Check Quectel PCIe device enumeration
-lspci | grep -i quectel
+lspci | grep -i qual
 
 # Alternatively, search by Quectel PCI Vendor ID (1eac)
 lspci -nn | grep -i 1eac
@@ -71,7 +71,8 @@ lspci -nn | grep -i 1eac
 
 **Expected Output:**
 ```text
-01:00.0 Wireless controller [0d40]: Quectel Wireless Solutions Co., Ltd. Device [1eac:1005] (rev 01)
+0002:20:00.0 PCI bridge [0604]: Rockchip Electronics Co., Ltd RK3588 [1d87:3588] (rev 01)
+0002:21:00.0 Unassigned class [ff00]: Qualcomm Technologies, Inc Device [17cb:0308]
 ```
 
 > **Note:** Successful output confirms that power rails, reset lines (PERST#), reference clocks (REFCLK), and PCIe lanes are properly negotiated.
@@ -105,32 +106,9 @@ crw------- 1 root root 511, 0 /dev/mhi_LOOPBACK  # Loopback / NMEA GNSS stream i
 crw------- 1 root root 511, 2 /dev/mhi_QMI0      # QMI / control endpoint
 ```
 
-> **AT Commands:** Use `/dev/mhi_DUN` or `/dev/mhi_BHI` (depending on host driver mappings) with standard serial terminal tools like `minicom`, `picocom`, or `microcom`:
-> ```bash
-> picocom -b 115200 /dev/mhi_DUN
-> ```
-
 ---
 
-## 3. Configure and Establish Data Connection
-
-Data sessions over PCIe typically operate via QMI/RMNET or MBIM protocols handled by Quectel's connection manager tool:
-
-```bash
-# Launch Quectel Connection Manager (example for default APN)
-sudo quectel-CM -i mhi_swip0 -s <your_apn>
-```
-
-Verify IP assignment on the host network interface (e.g., `mhi_swip0` or `wwan0`):
-
-```bash
-ip addr show dev mhi_swip0
-ping -I mhi_swip0 -c 4 8.8.8.8
-```
-
----
-
-## 4. Enable GNSS and Stream NMEA Data
+## 3. Enable GNSS and Stream NMEA Data
 
 Once the base driver and AT interfaces are functional, enabling GNSS is straightforward via standard Quectel AT commands.
 
